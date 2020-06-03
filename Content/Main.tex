@@ -1,0 +1,68 @@
+% --- PREAMBLE ------------------------------------------------------------------
+\documentclass[9pt,twocolumn,twoside]{pnas-new} % 'lineno' if desired twocolumn,
+\templatetype{pnasresearcharticle} % Choose template 
+\usepackage{siunitx}
+\usepackage{nameref} % Cross-reference name of section
+\usepackage[misc]{ifsym} % For the \Letter symbol
+\usepackage{blindtext}
+\DeclareGraphicsExtensions{.png,.pdf} %
+
+% TITLE-PAGE SPECIFIC 
+\input{TitlePage}
+
+% --- MAIN SECTIONS -------------------------------------------------------------
+
+\begin{document}
+
+% GENERATE TITLE INCLUDING AFFILIATIONS
+\maketitle 
+\thispagestyle{firststyle}
+\abscontent %Abstract
+
+% MAIN TEXT
+\input{Introduction}
+\input{Results}
+\input{Discussion}
+\input{MatMethods}
+
+% ACKNOWLEDGMENTS
+\input{Acknowledgements}
+
+% BIBLIOGRAPHY
+\section*{Bibliography}
+\bibliography{Bibliography}
+
+% SUPPLEMENTS
+\input{Supplement}
+
+\end{document}
+
+% --- HELPFUL INFORMATION ----------------------------------------------
+
+% Figure Formatting from PNAS:
+% Images must be provided at final size, preferably 1 column width (8.7cm). Figures wider than 1 column should be sized to 11.4cm or 17.8cm wide. Numbers, letters, and symbols should be no smaller than 6 points (2mm) and no larger than 12 points (6mm) after reduction and must be consistent. 
+
+% To insert a figure wider than one column, please use the \verb|\begin{figure*}...\end{figure*}| environment. Figures wider than one column should be sized to 11.4 cm or 17.8 cm wide. Use \verb|\begin{SCfigure*}...\end{SCfigure*}| for a wide figure with side legends.
+
+% Example for Table Environment:
+% \begin{table}%[tbhp]
+% \centering
+% \caption{Comparison of the fitted potential energy surfaces and ab initio benchmark electronic energy calculations}
+% \begin{tabular}{lrrr}
+% Species & CBS & CV & G3 \\
+% \midrule
+% 1. Acetaldehyde & 0.0 & 0.0 & 0.0 \\
+% 2. Vinyl alcohol & 9.1 & 9.6 & 13.5 \\
+% 3. Hydroxyethylidene & 50.8 & 51.2 & 54.0\\
+% \bottomrule
+% \end{tabular}
+
+% \addtabletext{nomenclature for the TSs refers to the numbered species in the table.}
+% \end{table}
+
+% Supplementary Information
+% The PNAS Overleaf SI template can be found here: \href{https://www.overleaf.com/latex/templates/pnas-template-for-supplementary-information/wqfsfqwyjtsd}{here}. Refer to the SI Appendix in the manuscript at an appropriate point in the text. Number supporting figures and tables starting with S1, S2, etc.
+
+% For Hypertext in Article:
+% eg, \href{http://www.pnascentral.org/cgi-bin/main.plex}{PNAScentral}
+
